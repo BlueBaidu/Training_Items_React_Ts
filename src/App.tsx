@@ -1,13 +1,14 @@
 import React from 'react';
-import DfsComponent from "./components/dfs/index"
 import './App.css';
 import Tabbar from './components/ReactRouterTest/Tabbar'
+import MainRouter from './router/IndexRouter';
 
 function App() {
   return (
     <div>
-      <DfsComponent />
-      <Tabbar></Tabbar>
+      <MainRouter>
+        <Tabbar></Tabbar>
+      </MainRouter>
     </div>
   );
 }
