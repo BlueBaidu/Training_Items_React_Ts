@@ -1,0 +1,52 @@
+.hj {
+  font-size: 16px;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  color: #e3f2fe;
+  text-align: left;
+  margin-left: -10px;
+}
+
+.timeline-span {
+  display: inline-block;
+  width: 70px;
+  margin-right: 20px;
+  height: 16px;
+  font-size: 16px;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  color: #e3f2fe;
+  opacity: 0.6;
+}
+
+.res {
+  font-size: 16px;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  color: #e3f2fe;
+}
+
+
+
+.layout {
+    background-color: #000535;
+    width: 600px;
+    padding: 15px 20px;
+    border-radius: 20px;
+  }
+
+  // 定义动画
+@keyframes scroll {
+    0% {
+      transform: translate(0, 0);
+    }
+  
+    100% {
+      transform: translate(0, -50%)
+    }
+  }
+  
+// 轮播项内容
+.container-item {
+    animation: scroll 5s linear infinite;
+  }

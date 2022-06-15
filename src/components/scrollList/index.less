@@ -1,0 +1,76 @@
+.deviceListItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    height: 36px;/* 必须 */
+    background-color: #00184b;
+    background-size: 100% 100%;
+    /* margin: 14px 20px 14px 20px;有边距会不顺滑，有瞬移的现象 */
+
+    span {
+      width: 20%;
+      text-align: center;
+      font-size: 14px;
+      font-family: Source Han Sans CN;
+      font-weight: 500;
+    }
+
+    .item {
+      color: rgba(26, 201, 255, 1);
+    }
+
+    .color {
+      color: rgba(67, 245, 254, 1);
+    }
+    .color1 {
+      color: rgba(242, 252, 156, 1);
+    }
+    .color2 {
+      color: rgba(172, 16, 16, 1);
+    }
+  }
+
+  .parent {
+    width: 100%;
+    height: 100%;/* 此处因父组件给了其固定宽度，所以设置为100%*/
+    margin-top: 10px;
+    overflow-y: hidden;/* 必须 */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    background-color: #000535;
+  }
+  .parent::-webkit-scrollbar {
+    display: none;
+  }
+  /*设置的子盒子高度大于父盒子，产生溢出效果*/
+  .child {
+    height: auto;
+  }
+
+  .child li {
+    /* width: 100%; */
+    height: 36px;
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    font-weight: 300;
+    font-size: 10px;
+    /* width: 100%; */
+  }
+
+  // 定义动画
+  @keyframes scroll {
+    0% {transform: translate(0,0);}
+    100% {transform: translate(0,-50%)}
+  }
+  // 轮播列表外壳
+  .container-scroll {
+    /* 高度为一整个div的高度*/
+    height: 180px;
+    overflow: hidden;
+  }
+  // 轮播项内容
+  .container-item {
+    animation: scroll 5s linear infinite;
+  }
