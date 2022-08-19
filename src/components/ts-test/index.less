@@ -1,0 +1,75 @@
+.container {
+    width: 600px;
+    height: 300px;
+    border: 1px solid black;
+}
+
+.a {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background-color: #1a4341;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+p {
+    border: 100px solid #998235;
+    border-radius: 50%;
+    position: relative;
+}
+
+/*before和after的公共属性*/
+p:before,
+p:after {
+    content: "";
+    position: absolute;
+}
+
+p:before {
+    width: 250px;
+    height: 140px;
+    background: repeating-linear-gradient(#1a4341,
+            #1a4341 20px,
+            #f3ac3c 20px,
+            #f3ac3c 40px);
+    top: -70px;
+    left: -125px;
+}
+
+p:after {
+    width: 270px;
+    height: 270px;
+    border-radius: 50%;
+    border: 12px solid #1a4341;
+    top: -135px;
+    left: -135px;
+}
+
+/* 动画 */
+.box {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: #f3ac3c;
+    animation: move 3s linear infinite;
+}
+
+@keyframes move {
+    0% {
+        left: 0px;
+    }
+
+    100% {
+        left: 500px;
+    }
+}
+
+/* 线性渐变 */
+.b {
+    width: 100%;
+    height: 100%;
+    /* 深粉色从0开始，深粉色到20px结束。浅粉色也在20px开始，在40px的地方结束。默认会repeat */
+    background: repeating-linear-gradient(#ff9a9e, #ff9a9e 20px, #fad0c4 20px, #fad0c4 40px);
+}

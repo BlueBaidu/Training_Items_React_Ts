@@ -108,7 +108,7 @@ const ScrollList = () => {
             <div className="layout">
                 <div>
                     <div style={{ height: '692.52px', overflow: 'hidden' }}>
-                        <Timeline className={(data.length > 3 ? "container-item" : '')} style={{ animationDuration: (data.length * 3 + 's') }}>
+                        <Timeline className={(data.length > 3 ? "container-item" : '')} style={{ animationDuration: (data.length * 1.916 + 's') }}>
                             {data.map((item, index) => renderItem(item, index))}
                             {data.length > 3 ? data.map((item, index) => renderItem(item, index)) : null}
                             {data.length <= 3 && <Timeline.Item></Timeline.Item>}
